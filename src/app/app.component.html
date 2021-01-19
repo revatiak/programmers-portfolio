@@ -1,0 +1,150 @@
+<app-header></app-header>
+
+<body>
+  <nav class="navbar navbar-default bg-success">
+    <div class="container-fluid">
+      <ul class="nav w-100">
+        <li class="w-50 text-center">
+          <a href="#" class="text-white" (click)="changeSection()"
+            [ngClass]="{'text-dark font-weight-bold': isPersonalSectionSelected}">
+            <u>Personal Section</u>
+          </a>
+        </li>
+        <li class="w-50 text-center">
+          <a routerLink="/professional-component" class="text-white" (click)="changeSection()"
+            [ngClass]="{'text-dark font-weight-bold': !isPersonalSectionSelected}">
+            <u>Professional Section</u>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div *ngIf="isPersonalSectionSelected" class="row border-bottom border-dark">
+    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 vertically-center">
+      <img class="rounded-circle z-depth-2 center-img" alt="My Profile Image" src="assets\images\download.png">
+    </div>
+    <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+      <p>
+        <strong>Name: </strong>
+        Revati Anant Kulkarni
+      </p>
+      <p>
+        <strong>Address: </strong>
+        Flat No. 510, Building No. 5, Vakil Nagar Housing Society, Erandwane, Pune - 411004.
+      </p>
+      <p>
+        <strong>Contact Number: </strong>
+        +91 7083335085 or +91 9021977366
+      </p>
+      <p>
+        <strong>Email Id: </strong>
+        rakulkarni96@gmail.com
+      </p>
+    </div>
+  </div>
+
+  <div *ngIf="isPersonalSectionSelected" class="row h-100 m-0">
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 border-right border-dark m-0 p-0">
+      <p class="bg-primary text-center">
+        <strong class="text-white">Education</strong>
+      </p>
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead class="thead-light">
+            <tr>
+              <th class="text-center" scope="col">Degree</th>
+              <th class="text-center" scope="col">Year of Passing</th>
+              <th class="text-center" scope="col">Board/University</th>
+              <th class="text-center" scope="col">Passing Percentage</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="text-center">B.E. Computer</td>
+              <td class="text-center">2018</td>
+              <td class="text-center">Univeristy of PUne</td>
+              <td class="text-center">72.46 %</td>
+            </tr>
+            <tr>
+              <td class="text-center">12th</td>
+              <td class="text-center">2014</td>
+              <td class="text-center">H.S.C. Board</td>
+              <td class="text-center">87.54 %</td>
+            </tr>
+            <tr>
+              <td class="text-center">10th</td>
+              <td class="text-center">2012</td>
+              <td class="text-center">S.S.C. Board</td>
+              <td class="text-center">93.64 %</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div style="margin-left: 10px;">
+        <p>
+          <strong>College Name: </strong>
+          Cummins College of Engineering for Women, Pune
+        </p>
+        <p>
+          <strong>Academic (B.E.) Project: </strong>
+          Gamified Mobile Learning Android Application for Sanskrit
+        </p>
+        <p>
+          <strong>Description: </strong>
+          Learning a new language is not easy and fun for everyone. But if it engages the
+          learners in an innovative and interactive way, then they get motivated. This can be done by
+          Gamification. Also there are many language learning apps available today but, either
+          they do not have Sanskrit or the application lacks the ability to keep the user engaged.
+        </p>
+        <strong>Responsibilities: </strong>
+        <ul>
+          <li>Developing front-end with interactive UI design & unit testing of the app.</li>
+          <li>Checking Grammar and vocabulary requirements for the Sanskrit language.</li>
+          <li>Deciding different types of questions and their answers for the basic, intermediate and advanced level of
+            the gamified application.</li>
+          <li>Audio making for all the words and sentences used in the app.</li>
+          <li>Deciding and making badge designs for different levels of the app.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 m-0 p-0">
+      <p class="bg-primary text-center">
+        <strong class="text-white">Other Info</strong>
+      </p>
+      <div style="margin-left: 10px;">
+        <p>
+          <strong>
+            Hobbies:
+          </strong>
+          Reading, Listening songs, watching movies or series
+        </p>
+        <p>
+          <strong>
+            Languages known:
+          </strong>
+          Marathi, Hindi, English
+        </p>
+        <div>
+          <strong>
+            Strengths:
+          </strong>
+          <ul>
+            <li>Good team player</li>
+            <li>Hard working</li>
+            <li>Well organized</li>
+          </ul>
+        </div>
+        <div>
+          <strong>
+            Weaknesses:
+          </strong>
+          <ul>
+            <li>Sometimes I can't say no, when someone asks for help and end up fixing their issues.</li>
+            <li>When my team-mate is being lazy for work, I tend to do their work sometimes, even though I do not get any credits for it.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+</body>
